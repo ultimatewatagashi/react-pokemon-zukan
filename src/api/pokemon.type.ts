@@ -1,4 +1,4 @@
-import { Name, NamedAPIResource } from './common.type';
+import type{ Name, NamedAPIResource } from './common.type';
 
 export interface PokemonSprites {
     front_default: string | null;
