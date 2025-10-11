@@ -1,7 +1,7 @@
 import { INITIAL_POKEMON_LIST_LIMIT } from '../config';
-import type{ PokemonListResult } from './pokemon';
+import type { PokemonListResult } from './pokemon';
 import { fetchPokemonList } from './pokemon';
-import type{ Pokemon } from './pokemon.type.ts';
+import type { Pokemon } from './pokemon.type';
 import { fetchPokemonJapaneseName } from './pokemonSpecies';
 
 // ポケモンの日本語名を含む拡張情報を表す型
@@ -10,6 +10,16 @@ export type PokemonWithJapaneseName = {
   url: string;           // ポケモンの詳細情報を取得するためのURL
   japaneseName: string;  // ポケモンの日本語名
   number: string;        // ポケモンの図鑑番号
+  types: {
+    type: {
+      name: string;
+    };
+  }[];
+  abilities: {
+    ability: {
+      name: string;
+    };
+  }[];
 };
 
 // 日本語名を含むポケモンリストの結果を表す型
