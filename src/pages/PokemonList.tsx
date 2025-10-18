@@ -2,8 +2,8 @@
 import React, { useEffect, useRef } from 'react';
 import { useInfiniteQuery } from '@tanstack/react-query';
 import { apiQueryKeys } from '../queryKeys';
-import { fetchPokemonListWithJapaneseNames } from '../api/pokemonWithJapaneseName';
-import type { PokemonWithJapaneseName } from '../api/pokemonWithJapaneseName';
+import { fetchPokemonListWithJapaneseNames } from '../api/PokemonWithJapaneseName';
+import type { PokemonWithJapaneseName } from '../api/PokemonWithJapaneseName';
 import PokemonCard from '../components/PokemonCard';
 import Skeleton from 'react-loading-skeleton';
 import 'react-loading-skeleton/dist/skeleton.css';
